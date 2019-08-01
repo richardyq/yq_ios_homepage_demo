@@ -9,12 +9,15 @@
 #import "MainStartViewController.h"
 #import "MainStartHeaderView.h"
 #import "MainStartBannerViewController.h"
+#import "MainStartCategoriesViewController.h"
+
 
 NSString* const StartBannerTableCellIdentifier = @"StartBannerTableCell";
+NSString* const StartCategoryTableCellIdentifier = @"StartCategoryTableCell";
 
 typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     MainStart_BannerSection,
-    //,
+    MainStart_CategorySection,
     MainStartSectionCount,
 };
 
@@ -27,6 +30,7 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
 @property (nonatomic, strong) MainStartBannerViewController* bannerViewController;
 @property (nonatomic, strong) NSArray<MainStartBannerItem*>* bannerItems;
 
+@property (nonatomic, strong) MainStartCategoriesViewController* categoryViewController;
 @property (nonatomic, strong) UITableView* tableview;
 
 @end
@@ -117,6 +121,14 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     return _bannerViewController;
 }
 
+- (MainStartCategoriesViewController*) categoryViewController{
+    if (!_categoryViewController) {
+        _categoryViewController = [[MainStartCategoriesViewController alloc] init];
+        [self addChildViewController:_categoryViewController];
+    }
+    return _categoryViewController;
+}
+
 - (NSArray<MainStartBannerItem*>*) bannerItems{
     if (!_bannerItems) {
         NSArray<NSString*>* imageUrls = @[@"http://img1.imgtn.bdimg.com/it/u=2282886292,1180391925&fm=26&gp=0.jpg", @"http://img.aiimg.com/uploads/allimg/161030/1-161030004542.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564571708604&di=03493a4d0f18c2b43cbf0d82c1e7d292&imgtype=0&src=http%3A%2F%2Fpic74.nipic.com%2Ffile%2F20150807%2F14145720_114538071000_2.jpg", @"http://img02.tooopen.com/images/20160427/tooopen_sy_160705159562.jpg"];
@@ -138,7 +150,8 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
-        case MainStart_BannerSection:{
+        case MainStart_BannerSection:
+        case MainStart_CategorySection:{
             return 1;
             break;
         }
@@ -153,8 +166,10 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
             cell = [self startBannerTableViewCell];
             break;
         }
-        default:
+        case MainStart_CategorySection:{
+            cell = [self startCategoryTableViewCell];
             break;
+        }
     }
     
     if (!cell) {
@@ -176,6 +191,19 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
         }];
         
         self.bannerViewController.dataSource = self;
+    }
+    return cell;
+}
+
+- (UITableViewCell*) startCategoryTableViewCell{
+    UITableViewCell* cell = [self.tableview dequeueReusableCellWithIdentifier:StartCategoryTableCellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:StartCategoryTableCellIdentifier];
+        [cell.contentView addSubview:self.categoryViewController.view];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        [self.categoryViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(cell.contentView);
+        }];
     }
     return cell;
 }

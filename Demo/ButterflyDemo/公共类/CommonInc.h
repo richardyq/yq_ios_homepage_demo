@@ -14,5 +14,6 @@
 #import "UIImage+ColorEx.h"
 
 #import "UIView+BadgeEx.h"
+#import "CommonUI.h"
 
 #endif /* CommonInc_h */

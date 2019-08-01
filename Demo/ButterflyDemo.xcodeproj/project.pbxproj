@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */; };
+		25845A0422F27752008386DD /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A0322F27752008386DD /* IconButton.m */; };
 		25A5260822F12885000F1F9A /* MainStartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5260722F12885000F1F9A /* MainStartHeaderView.m */; };
 		25A5262F22F1708F000F1F9A /* MainStartBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */; };
 		25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF534422EE8D6B005A1C93 /* AppDelegate.m */; };
@@ -32,6 +33,9 @@
 /* Begin PBXFileReference section */
 		258459FE22F26E9A008386DD /* MainStartCategoriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartCategoriesViewController.h; sourceTree = "<group>"; };
 		258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartCategoriesViewController.m; sourceTree = "<group>"; };
+		25845A0222F27752008386DD /* IconButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
+		25845A0322F27752008386DD /* IconButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
+		25845A0522F2784C008386DD /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		25A5260622F12885000F1F9A /* MainStartHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartHeaderView.h; sourceTree = "<group>"; };
 		25A5260722F12885000F1F9A /* MainStartHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartHeaderView.m; sourceTree = "<group>"; };
 		25A5260922F12936000F1F9A /* CommonMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMarco.h; sourceTree = "<group>"; };
@@ -87,6 +91,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25845A0122F27703008386DD /* 公共界面 */ = {
+			isa = PBXGroup;
+			children = (
+				25845A0222F27752008386DD /* IconButton.h */,
+				25845A0322F27752008386DD /* IconButton.m */,
+				25845A0522F2784C008386DD /* CommonUI.h */,
+			);
+			path = "公共界面";
+			sourceTree = "<group>";
+		};
 		25A5260422F12685000F1F9A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +169,7 @@
 		25AF535B22EE8EF1005A1C93 /* 公共类 */ = {
 			isa = PBXGroup;
 			children = (
+				25845A0122F27703008386DD /* 公共界面 */,
 				25AF536522EE9085005A1C93 /* BasePage */,
 				25AF535C22EE8EF1005A1C93 /* Category */,
 				25AF536422EE902C005A1C93 /* CommonInc.h */,
@@ -356,6 +371,7 @@
 				25AF538622EED956005A1C93 /* UIView+BadgeEx.m in Sources */,
 				25AF537722EE940A005A1C93 /* DiscoveryStartViewController.m in Sources */,
 				25AF535322EE8D6D005A1C93 /* main.m in Sources */,
+				25845A0422F27752008386DD /* IconButton.m in Sources */,
 				25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */,
 				25AF538322EEC58F005A1C93 /* UIImage+ColorEx.m in Sources */,
 				25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */,
