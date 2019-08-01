@@ -10,19 +10,24 @@
 #import "MainStartHeaderView.h"
 #import "MainStartBannerViewController.h"
 #import "MainStartCategoriesViewController.h"
-
+#import "MainStartFavourViewController.h"
+#import "AlbumTableViewCell.h"
 
 NSString* const StartBannerTableCellIdentifier = @"StartBannerTableCell";
 NSString* const StartCategoryTableCellIdentifier = @"StartCategoryTableCell";
+NSString* const StartFavourTableCellIdentifier = @"StartFavourTableCell";
+NSString* const StartAlbumTableViewCellIdentifier = @"AlbumTableViewCell";
 
 typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     MainStart_BannerSection,
     MainStart_CategorySection,
+    MainStart_FavourSection,
+    MainStart_AlumbSection,
     MainStartSectionCount,
 };
 
 @interface MainStartViewController ()
-<MainStartBannerDataSource, UITableViewDataSource>
+<MainStartBannerDataSource, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) MainStartHeaderView* nagigationHeaderView;
 @property (nonatomic, strong) UIImageView* navigationBackgroundImageView;
@@ -31,7 +36,10 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
 @property (nonatomic, strong) NSArray<MainStartBannerItem*>* bannerItems;
 
 @property (nonatomic, strong) MainStartCategoriesViewController* categoryViewController;
+@property (nonatomic, strong) MainStartFavourViewController* favourViewController;
 @property (nonatomic, strong) UITableView* tableview;
+
+@property (nonatomic, strong) NSArray<AlbumModel*>* albumModels;
 
 @end
 
@@ -50,6 +58,11 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     
     [self.bannerViewController addObserver:self forKeyPath:@"bannerColor" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
+    self.tableview.estimatedRowHeight = 41;
+    self.tableview.estimatedSectionFooterHeight = 0;
+    self.tableview.estimatedSectionHeaderHeight = 0;
+    
+    [self.tableview registerClass:[AlbumTableViewCell class] forCellReuseIdentifier:StartAlbumTableViewCellIdentifier];
 }
 
 - (void) layoutElements{
@@ -108,6 +121,7 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
         [self.view addSubview:_tableview];
         _tableview.dataSource = self;
         _tableview.backgroundColor = [UIColor clearColor];
+        _tableview.delegate = self;
     }
     return _tableview;
 }
@@ -129,6 +143,14 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     return _categoryViewController;
 }
 
+- (MainStartFavourViewController*) favourViewController{
+    if (!_favourViewController) {
+        _favourViewController = [[MainStartFavourViewController alloc] init];
+        [self addChildViewController:_favourViewController];
+    }
+    return _favourViewController;
+}
+
 - (NSArray<MainStartBannerItem*>*) bannerItems{
     if (!_bannerItems) {
         NSArray<NSString*>* imageUrls = @[@"http://img1.imgtn.bdimg.com/it/u=2282886292,1180391925&fm=26&gp=0.jpg", @"http://img.aiimg.com/uploads/allimg/161030/1-161030004542.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564571708604&di=03493a4d0f18c2b43cbf0d82c1e7d292&imgtype=0&src=http%3A%2F%2Fpic74.nipic.com%2Ffile%2F20150807%2F14145720_114538071000_2.jpg", @"http://img02.tooopen.com/images/20160427/tooopen_sy_160705159562.jpg"];
@@ -143,6 +165,25 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
     return _bannerItems;
 }
 
+- (NSArray<AlbumModel*>*) albumModels{
+    if (!_albumModels) {
+        NSMutableArray<AlbumModel*>* models = [NSMutableArray<AlbumModel*> array];
+        NSArray<NSString*>* names = @[@"寻秦记", @"三国演义", @"倚天屠龙记", @"鹿鼎记", @"大唐西域记"];
+        [names enumerateObjectsUsingBlock:^(NSString * _Nonnull name, NSUInteger idx, BOOL * _Nonnull stop) {
+            AlbumModel* album = [AlbumModel new];
+            album.name = name;
+            album.summary = @"最近，有一位王先生反映他在农村信用社取钱的时候被银行“算计”了，他说当天自己在柜台取了8000块钱";
+            album.author = @"王玉雯";
+            album.coverUrl = @"http://hbimg.b0.upaiyun.com/3e4d6a143b4b03a1bd6c3bc1cc74b1d9627ead58355ce-4VJuKu_fw658";
+            album.playCount = arc4random() % 800000000;
+            [models addObject:album];
+        }];
+        
+        _albumModels = [NSArray<AlbumModel*> arrayWithArray:models];
+    }
+    return _albumModels;
+}
+
 #pragma mark - table view data source
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return MainStartSectionCount;
@@ -151,8 +192,13 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case MainStart_BannerSection:
-        case MainStart_CategorySection:{
+        case MainStart_CategorySection:
+        case MainStart_FavourSection:{
             return 1;
+            break;
+        }
+        case MainStart_AlumbSection:{
+            return self.albumModels.count;
             break;
         }
     }
@@ -170,11 +216,21 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
             cell = [self startCategoryTableViewCell];
             break;
         }
+        case MainStart_FavourSection:{
+            cell = [self startFavourTableViewCell];
+            break;
+        }
+        case MainStart_AlumbSection:{
+            AlbumTableViewCell* albumCell = [tableView dequeueReusableCellWithIdentifier:StartAlbumTableViewCellIdentifier];
+            [albumCell setAlbumModel:self.albumModels[indexPath.row]];
+            cell = albumCell;
+        }
     }
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainStartTableViewCell"];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -206,6 +262,57 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
         }];
     }
     return cell;
+}
+
+- (UITableViewCell*) startFavourTableViewCell{
+    UITableViewCell* cell = [self.tableview dequeueReusableCellWithIdentifier:StartFavourTableCellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:StartFavourTableCellIdentifier];
+        [cell.contentView addSubview:self.favourViewController.view];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        [self.favourViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(cell.contentView);
+        }];
+    }
+    return cell;
+}
+
+#pragma mark - tableview delegate
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    switch (section) {
+        case MainStart_FavourSection:
+        case MainStart_AlumbSection:
+            return 40;
+            break;
+            
+        default:
+            break;
+    }
+    return 0;
+}
+
+- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView* headerview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 40)];
+    headerview.backgroundColor = [UIColor whiteColor];
+    
+    UILabel* label = [headerview addLabel:[UIColor commonTextColor] textSize:15];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(headerview).offset(15);
+        make.centerY.equalTo(headerview);
+    }];
+    
+    switch (section) {
+        case MainStart_FavourSection:{
+            label.text = @"猜你喜欢";
+            break;
+        }
+        case MainStart_AlumbSection:{
+            label.text = @"人气推荐";
+            break;
+        }
+    }
+    
+    return headerview;
 }
 
 #pragma mark - MainStartBannerDataSource

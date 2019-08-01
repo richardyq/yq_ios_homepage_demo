@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSArray<IconButton*>* categoryButtons;
 @property (nonatomic, strong) UIView* headlineView;
 
+@property (nonatomic, strong) UIButton* headlineButton;
+
 @end
 
 @implementation MainStartCategoriesViewController
@@ -50,6 +52,12 @@
         make.height.mas_equalTo(@31);
     }];
     
+    [self.headlineButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(71, 26));
+        make.centerY.equalTo(self.headlineView);
+        make.right.equalTo(self.headlineView).offset(-10);
+    }];
+    
 }
 
 #pragma mark - settingAndGetting
@@ -72,8 +80,17 @@
     if (!_headlineView) {
         _headlineView = [UIView new];
         [self.view addSubview:_headlineView];
+        [_headlineView showBoarder:UIViewBorderLineTypeTop];
     }
     return _headlineView;
+}
+
+- (UIButton*) headlineButton{
+    if (!_headlineButton){
+        _headlineButton = [self.headlineView addStokeButton:[UIColor mainThemeColor] size:CGSizeMake(71, 26) title:@"今日头条" titleSize:13];
+    
+    }
+    return _headlineButton;
 }
 
 @end

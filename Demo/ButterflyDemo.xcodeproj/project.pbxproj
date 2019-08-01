@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */; };
 		25845A0422F27752008386DD /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A0322F27752008386DD /* IconButton.m */; };
+		25845A0822F2864E008386DD /* MainStartFavourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A0722F2864E008386DD /* MainStartFavourViewController.m */; };
+		25845A0C22F28AF9008386DD /* MainStartFavourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A0B22F28AF9008386DD /* MainStartFavourModel.m */; };
+		25845A0F22F29599008386DD /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A0E22F29599008386DD /* AlbumModel.m */; };
+		25845A1222F2B190008386DD /* AlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25845A1122F2B190008386DD /* AlbumTableViewCell.m */; };
 		25A5260822F12885000F1F9A /* MainStartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5260722F12885000F1F9A /* MainStartHeaderView.m */; };
 		25A5262F22F1708F000F1F9A /* MainStartBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */; };
 		25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF534422EE8D6B005A1C93 /* AppDelegate.m */; };
@@ -36,6 +40,14 @@
 		25845A0222F27752008386DD /* IconButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		25845A0322F27752008386DD /* IconButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 		25845A0522F2784C008386DD /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
+		25845A0622F2864E008386DD /* MainStartFavourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartFavourViewController.h; sourceTree = "<group>"; };
+		25845A0722F2864E008386DD /* MainStartFavourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartFavourViewController.m; sourceTree = "<group>"; };
+		25845A0A22F28AF9008386DD /* MainStartFavourModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartFavourModel.h; sourceTree = "<group>"; };
+		25845A0B22F28AF9008386DD /* MainStartFavourModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartFavourModel.m; sourceTree = "<group>"; };
+		25845A0D22F29599008386DD /* AlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumModel.h; sourceTree = "<group>"; };
+		25845A0E22F29599008386DD /* AlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumModel.m; sourceTree = "<group>"; };
+		25845A1022F2B190008386DD /* AlbumTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewCell.h; sourceTree = "<group>"; };
+		25845A1122F2B190008386DD /* AlbumTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewCell.m; sourceTree = "<group>"; };
 		25A5260622F12885000F1F9A /* MainStartHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartHeaderView.h; sourceTree = "<group>"; };
 		25A5260722F12885000F1F9A /* MainStartHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartHeaderView.m; sourceTree = "<group>"; };
 		25A5260922F12936000F1F9A /* CommonMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMarco.h; sourceTree = "<group>"; };
@@ -101,9 +113,21 @@
 			path = "公共界面";
 			sourceTree = "<group>";
 		};
+		25845A0922F28ADF008386DD /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				25845A0A22F28AF9008386DD /* MainStartFavourModel.h */,
+				25845A0B22F28AF9008386DD /* MainStartFavourModel.m */,
+				25845A0D22F29599008386DD /* AlbumModel.h */,
+				25845A0E22F29599008386DD /* AlbumModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		25A5260422F12685000F1F9A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				25845A0922F28ADF008386DD /* DataModel */,
 				25A5260522F12698000F1F9A /* UI */,
 			);
 			path = "首页";
@@ -118,6 +142,10 @@
 				25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */,
 				258459FE22F26E9A008386DD /* MainStartCategoriesViewController.h */,
 				258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */,
+				25845A0622F2864E008386DD /* MainStartFavourViewController.h */,
+				25845A0722F2864E008386DD /* MainStartFavourViewController.m */,
+				25845A1022F2B190008386DD /* AlbumTableViewCell.h */,
+				25845A1122F2B190008386DD /* AlbumTableViewCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -360,12 +388,15 @@
 				25AF537422EE93B7005A1C93 /* HistoryStartViewController.m in Sources */,
 				25AF536322EE8FB4005A1C93 /* UIColor+MainTheme.m in Sources */,
 				25AF537A22EE9418005A1C93 /* PersonStartViewController.m in Sources */,
+				25845A0822F2864E008386DD /* MainStartFavourViewController.m in Sources */,
 				25AF537D22EE9F39005A1C93 /* MainTabbarView.m in Sources */,
 				25AF536E22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m in Sources */,
 				25A5262F22F1708F000F1F9A /* MainStartBannerViewController.m in Sources */,
 				25A5260822F12885000F1F9A /* MainStartHeaderView.m in Sources */,
+				25845A0C22F28AF9008386DD /* MainStartFavourModel.m in Sources */,
 				25AF536822EE909B005A1C93 /* BaseViewController.m in Sources */,
 				25AF536B22EE9126005A1C93 /* BaseNavigationViewController.m in Sources */,
+				25845A1222F2B190008386DD /* AlbumTableViewCell.m in Sources */,
 				25AF537122EE9387005A1C93 /* MainStartViewController.m in Sources */,
 				25AF536022EE8F66005A1C93 /* MainStartTabbarViewController.m in Sources */,
 				25AF538622EED956005A1C93 /* UIView+BadgeEx.m in Sources */,
@@ -375,6 +406,7 @@
 				25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */,
 				25AF538322EEC58F005A1C93 /* UIImage+ColorEx.m in Sources */,
 				25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */,
+				25845A0F22F29599008386DD /* AlbumModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
