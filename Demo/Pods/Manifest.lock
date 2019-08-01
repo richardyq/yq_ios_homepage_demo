@@ -1,0 +1,52 @@
+PODS:
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (6.2.1)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.16)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
+  - YJUIKit (0.1.0):
+    - Masonry
+    - MJExtension
+    - YYKit
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture
+  - IQKeyboardManager
+  - SDWebImage
+  - YJUIKit (from `http://39.108.16.93:20081/yinq/YJUIKit.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - SDWebImage
+    - YYKit
+
+EXTERNAL SOURCES:
+  YJUIKit:
+    :git: http://39.108.16.93:20081/yinq/YJUIKit.git
+
+CHECKOUT OPTIONS:
+  YJUIKit:
+    :commit: e290a1cbf67a2f9d996a91adb0c2b80bd556ed35
+    :git: http://39.108.16.93:20081/yinq/YJUIKit.git
+
+SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+  YJUIKit: a851d44f4a83df1d7b5056729e95604861a1e6c4
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 178cf10ca29a160fbb87b46453b75b83f5aedcb4
+
+COCOAPODS: 1.6.1

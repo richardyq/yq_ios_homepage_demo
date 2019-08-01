@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */; };
+		25A5260822F12885000F1F9A /* MainStartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5260722F12885000F1F9A /* MainStartHeaderView.m */; };
+		25A5262F22F1708F000F1F9A /* MainStartBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */; };
+		25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF534422EE8D6B005A1C93 /* AppDelegate.m */; };
+		25AF534D22EE8D6D005A1C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AF534C22EE8D6D005A1C93 /* Assets.xcassets */; };
+		25AF535022EE8D6D005A1C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AF534E22EE8D6D005A1C93 /* LaunchScreen.storyboard */; };
+		25AF535322EE8D6D005A1C93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF535222EE8D6D005A1C93 /* main.m */; };
+		25AF536022EE8F66005A1C93 /* MainStartTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF535F22EE8F66005A1C93 /* MainStartTabbarViewController.m */; };
+		25AF536322EE8FB4005A1C93 /* UIColor+MainTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF536222EE8FB4005A1C93 /* UIColor+MainTheme.m */; };
+		25AF536822EE909B005A1C93 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF536722EE909B005A1C93 /* BaseViewController.m */; };
+		25AF536B22EE9126005A1C93 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF536A22EE9126005A1C93 /* BaseNavigationViewController.m */; };
+		25AF536E22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF536D22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m */; };
+		25AF537122EE9387005A1C93 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF537022EE9387005A1C93 /* MainStartViewController.m */; };
+		25AF537422EE93B7005A1C93 /* HistoryStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF537322EE93B7005A1C93 /* HistoryStartViewController.m */; };
+		25AF537722EE940A005A1C93 /* DiscoveryStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF537622EE940A005A1C93 /* DiscoveryStartViewController.m */; };
+		25AF537A22EE9418005A1C93 /* PersonStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF537922EE9418005A1C93 /* PersonStartViewController.m */; };
+		25AF537D22EE9F39005A1C93 /* MainTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF537C22EE9F39005A1C93 /* MainTabbarView.m */; };
+		25AF538322EEC58F005A1C93 /* UIImage+ColorEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF538222EEC58F005A1C93 /* UIImage+ColorEx.m */; };
+		25AF538622EED956005A1C93 /* UIView+BadgeEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF538522EED956005A1C93 /* UIView+BadgeEx.m */; };
+		A7118CEF671A123E3A3C97F3 /* libPods-ButterflyDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0265F7259792A267A2B631 /* libPods-ButterflyDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		258459FE22F26E9A008386DD /* MainStartCategoriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartCategoriesViewController.h; sourceTree = "<group>"; };
+		258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartCategoriesViewController.m; sourceTree = "<group>"; };
+		25A5260622F12885000F1F9A /* MainStartHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartHeaderView.h; sourceTree = "<group>"; };
+		25A5260722F12885000F1F9A /* MainStartHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartHeaderView.m; sourceTree = "<group>"; };
+		25A5260922F12936000F1F9A /* CommonMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMarco.h; sourceTree = "<group>"; };
+		25A5262D22F1708F000F1F9A /* MainStartBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartBannerViewController.h; sourceTree = "<group>"; };
+		25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartBannerViewController.m; sourceTree = "<group>"; };
+		25A5263022F176B1000F1F9A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		25AF534022EE8D6B005A1C93 /* ButterflyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterflyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25AF534322EE8D6B005A1C93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		25AF534422EE8D6B005A1C93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		25AF534C22EE8D6D005A1C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25AF534F22EE8D6D005A1C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25AF535122EE8D6D005A1C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25AF535222EE8D6D005A1C93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25AF535E22EE8F66005A1C93 /* MainStartTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartTabbarViewController.h; sourceTree = "<group>"; };
+		25AF535F22EE8F66005A1C93 /* MainStartTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartTabbarViewController.m; sourceTree = "<group>"; };
+		25AF536122EE8FB4005A1C93 /* UIColor+MainTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MainTheme.h"; sourceTree = "<group>"; };
+		25AF536222EE8FB4005A1C93 /* UIColor+MainTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MainTheme.m"; sourceTree = "<group>"; };
+		25AF536422EE902C005A1C93 /* CommonInc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonInc.h; sourceTree = "<group>"; };
+		25AF536622EE909B005A1C93 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		25AF536722EE909B005A1C93 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		25AF536922EE9126005A1C93 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		25AF536A22EE9126005A1C93 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
+		25AF536C22EE9153005A1C93 /* UIBarButtonItem+BackExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BackExtension.h"; sourceTree = "<group>"; };
+		25AF536D22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BackExtension.m"; sourceTree = "<group>"; };
+		25AF536F22EE9387005A1C93 /* MainStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
+		25AF537022EE9387005A1C93 /* MainStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
+		25AF537222EE93B7005A1C93 /* HistoryStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryStartViewController.h; sourceTree = "<group>"; };
+		25AF537322EE93B7005A1C93 /* HistoryStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryStartViewController.m; sourceTree = "<group>"; };
+		25AF537522EE940A005A1C93 /* DiscoveryStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoveryStartViewController.h; sourceTree = "<group>"; };
+		25AF537622EE940A005A1C93 /* DiscoveryStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoveryStartViewController.m; sourceTree = "<group>"; };
+		25AF537822EE9418005A1C93 /* PersonStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonStartViewController.h; sourceTree = "<group>"; };
+		25AF537922EE9418005A1C93 /* PersonStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonStartViewController.m; sourceTree = "<group>"; };
+		25AF537B22EE9F39005A1C93 /* MainTabbarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabbarView.h; sourceTree = "<group>"; };
+		25AF537C22EE9F39005A1C93 /* MainTabbarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabbarView.m; sourceTree = "<group>"; };
+		25AF538122EEC58F005A1C93 /* UIImage+ColorEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorEx.h"; sourceTree = "<group>"; };
+		25AF538222EEC58F005A1C93 /* UIImage+ColorEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorEx.m"; sourceTree = "<group>"; };
+		25AF538422EED956005A1C93 /* UIView+BadgeEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeEx.h"; sourceTree = "<group>"; };
+		25AF538522EED956005A1C93 /* UIView+BadgeEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeEx.m"; sourceTree = "<group>"; };
+		4EF4CB53579C45568B6FE41E /* Pods-ButterflyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterflyDemo.release.xcconfig"; path = "Target Support Files/Pods-ButterflyDemo/Pods-ButterflyDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EE0265F7259792A267A2B631 /* libPods-ButterflyDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterflyDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F682B455E766ED40798C2A22 /* Pods-ButterflyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterflyDemo.debug.xcconfig"; path = "Target Support Files/Pods-ButterflyDemo/Pods-ButterflyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25AF533D22EE8D6B005A1C93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7118CEF671A123E3A3C97F3 /* libPods-ButterflyDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25A5260422F12685000F1F9A /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				25A5260522F12698000F1F9A /* UI */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		25A5260522F12698000F1F9A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				25A5260622F12885000F1F9A /* MainStartHeaderView.h */,
+				25A5260722F12885000F1F9A /* MainStartHeaderView.m */,
+				25A5262D22F1708F000F1F9A /* MainStartBannerViewController.h */,
+				25A5262E22F1708F000F1F9A /* MainStartBannerViewController.m */,
+				258459FE22F26E9A008386DD /* MainStartCategoriesViewController.h */,
+				258459FF22F26E9A008386DD /* MainStartCategoriesViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		25AF533722EE8D6B005A1C93 = {
+			isa = PBXGroup;
+			children = (
+				25AF535922EE8E15005A1C93 /* SupportFiles */,
+				25AF534222EE8D6B005A1C93 /* ButterflyDemo */,
+				25AF534122EE8D6B005A1C93 /* Products */,
+				57361E34E46A857CAEC72C4B /* Pods */,
+				743F346A120EEA7FA54310A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25AF534122EE8D6B005A1C93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25AF534022EE8D6B005A1C93 /* ButterflyDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25AF534222EE8D6B005A1C93 /* ButterflyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				25A5260422F12685000F1F9A /* 首页 */,
+				25AF535D22EE8F40005A1C93 /* 首页框架 */,
+				25AF535B22EE8EF1005A1C93 /* 公共类 */,
+				25AF534322EE8D6B005A1C93 /* AppDelegate.h */,
+				25AF534422EE8D6B005A1C93 /* AppDelegate.m */,
+				25AF534C22EE8D6D005A1C93 /* Assets.xcassets */,
+				25AF534E22EE8D6D005A1C93 /* LaunchScreen.storyboard */,
+				25AF535122EE8D6D005A1C93 /* Info.plist */,
+				25AF535222EE8D6D005A1C93 /* main.m */,
+			);
+			path = ButterflyDemo;
+			sourceTree = "<group>";
+		};
+		25AF535922EE8E15005A1C93 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				25A5263022F176B1000F1F9A /* PrefixHeader.pch */,
+				25A5260922F12936000F1F9A /* CommonMarco.h */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		25AF535B22EE8EF1005A1C93 /* 公共类 */ = {
+			isa = PBXGroup;
+			children = (
+				25AF536522EE9085005A1C93 /* BasePage */,
+				25AF535C22EE8EF1005A1C93 /* Category */,
+				25AF536422EE902C005A1C93 /* CommonInc.h */,
+			);
+			path = "公共类";
+			sourceTree = "<group>";
+		};
+		25AF535C22EE8EF1005A1C93 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				25AF536122EE8FB4005A1C93 /* UIColor+MainTheme.h */,
+				25AF536222EE8FB4005A1C93 /* UIColor+MainTheme.m */,
+				25AF536C22EE9153005A1C93 /* UIBarButtonItem+BackExtension.h */,
+				25AF536D22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m */,
+				25AF538122EEC58F005A1C93 /* UIImage+ColorEx.h */,
+				25AF538222EEC58F005A1C93 /* UIImage+ColorEx.m */,
+				25AF538422EED956005A1C93 /* UIView+BadgeEx.h */,
+				25AF538522EED956005A1C93 /* UIView+BadgeEx.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		25AF535D22EE8F40005A1C93 /* 首页框架 */ = {
+			isa = PBXGroup;
+			children = (
+				25AF535E22EE8F66005A1C93 /* MainStartTabbarViewController.h */,
+				25AF535F22EE8F66005A1C93 /* MainStartTabbarViewController.m */,
+				25AF536F22EE9387005A1C93 /* MainStartViewController.h */,
+				25AF537022EE9387005A1C93 /* MainStartViewController.m */,
+				25AF537222EE93B7005A1C93 /* HistoryStartViewController.h */,
+				25AF537322EE93B7005A1C93 /* HistoryStartViewController.m */,
+				25AF537522EE940A005A1C93 /* DiscoveryStartViewController.h */,
+				25AF537622EE940A005A1C93 /* DiscoveryStartViewController.m */,
+				25AF537822EE9418005A1C93 /* PersonStartViewController.h */,
+				25AF537922EE9418005A1C93 /* PersonStartViewController.m */,
+				25AF537B22EE9F39005A1C93 /* MainTabbarView.h */,
+				25AF537C22EE9F39005A1C93 /* MainTabbarView.m */,
+			);
+			path = "首页框架";
+			sourceTree = "<group>";
+		};
+		25AF536522EE9085005A1C93 /* BasePage */ = {
+			isa = PBXGroup;
+			children = (
+				25AF536922EE9126005A1C93 /* BaseNavigationViewController.h */,
+				25AF536A22EE9126005A1C93 /* BaseNavigationViewController.m */,
+				25AF536622EE909B005A1C93 /* BaseViewController.h */,
+				25AF536722EE909B005A1C93 /* BaseViewController.m */,
+			);
+			path = BasePage;
+			sourceTree = "<group>";
+		};
+		57361E34E46A857CAEC72C4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F682B455E766ED40798C2A22 /* Pods-ButterflyDemo.debug.xcconfig */,
+				4EF4CB53579C45568B6FE41E /* Pods-ButterflyDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		743F346A120EEA7FA54310A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE0265F7259792A267A2B631 /* libPods-ButterflyDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25AF533F22EE8D6B005A1C93 /* ButterflyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25AF535622EE8D6D005A1C93 /* Build configuration list for PBXNativeTarget "ButterflyDemo" */;
+			buildPhases = (
+				45F4136ACE2201710ACBFFAC /* [CP] Check Pods Manifest.lock */,
+				25AF533C22EE8D6B005A1C93 /* Sources */,
+				25AF533D22EE8D6B005A1C93 /* Frameworks */,
+				25AF533E22EE8D6B005A1C93 /* Resources */,
+				BCAEB621D9D4641499EDD173 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButterflyDemo;
+			productName = ButterflyDemo;
+			productReference = 25AF534022EE8D6B005A1C93 /* ButterflyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25AF533822EE8D6B005A1C93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "殷全";
+				TargetAttributes = {
+					25AF533F22EE8D6B005A1C93 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 25AF533B22EE8D6B005A1C93 /* Build configuration list for PBXProject "ButterflyDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25AF533722EE8D6B005A1C93;
+			productRefGroup = 25AF534122EE8D6B005A1C93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25AF533F22EE8D6B005A1C93 /* ButterflyDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25AF533E22EE8D6B005A1C93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25AF535022EE8D6D005A1C93 /* LaunchScreen.storyboard in Resources */,
+				25AF534D22EE8D6D005A1C93 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45F4136ACE2201710ACBFFAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ButterflyDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAEB621D9D4641499EDD173 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButterflyDemo/Pods-ButterflyDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButterflyDemo/Pods-ButterflyDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25AF533C22EE8D6B005A1C93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25AF537422EE93B7005A1C93 /* HistoryStartViewController.m in Sources */,
+				25AF536322EE8FB4005A1C93 /* UIColor+MainTheme.m in Sources */,
+				25AF537A22EE9418005A1C93 /* PersonStartViewController.m in Sources */,
+				25AF537D22EE9F39005A1C93 /* MainTabbarView.m in Sources */,
+				25AF536E22EE9153005A1C93 /* UIBarButtonItem+BackExtension.m in Sources */,
+				25A5262F22F1708F000F1F9A /* MainStartBannerViewController.m in Sources */,
+				25A5260822F12885000F1F9A /* MainStartHeaderView.m in Sources */,
+				25AF536822EE909B005A1C93 /* BaseViewController.m in Sources */,
+				25AF536B22EE9126005A1C93 /* BaseNavigationViewController.m in Sources */,
+				25AF537122EE9387005A1C93 /* MainStartViewController.m in Sources */,
+				25AF536022EE8F66005A1C93 /* MainStartTabbarViewController.m in Sources */,
+				25AF538622EED956005A1C93 /* UIView+BadgeEx.m in Sources */,
+				25AF537722EE940A005A1C93 /* DiscoveryStartViewController.m in Sources */,
+				25AF535322EE8D6D005A1C93 /* main.m in Sources */,
+				25AF534522EE8D6B005A1C93 /* AppDelegate.m in Sources */,
+				25AF538322EEC58F005A1C93 /* UIImage+ColorEx.m in Sources */,
+				25845A0022F26E9A008386DD /* MainStartCategoriesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25AF534E22EE8D6D005A1C93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25AF534F22EE8D6D005A1C93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25AF535422EE8D6D005A1C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		25AF535522EE8D6D005A1C93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25AF535722EE8D6D005A1C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F682B455E766ED40798C2A22 /* Pods-ButterflyDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GPXB7K325C;
+				GCC_PREFIX_HEADER = SupportFiles/PrefixHeader.pch;
+				INFOPLIST_FILE = ButterflyDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinq.ButterflyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25AF535822EE8D6D005A1C93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF4CB53579C45568B6FE41E /* Pods-ButterflyDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GPXB7K325C;
+				GCC_PREFIX_HEADER = SupportFiles/PrefixHeader.pch;
+				INFOPLIST_FILE = ButterflyDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinq.ButterflyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25AF533B22EE8D6B005A1C93 /* Build configuration list for PBXProject "ButterflyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AF535422EE8D6D005A1C93 /* Debug */,
+				25AF535522EE8D6D005A1C93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25AF535622EE8D6D005A1C93 /* Build configuration list for PBXNativeTarget "ButterflyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AF535722EE8D6D005A1C93 /* Debug */,
+				25AF535822EE8D6D005A1C93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25AF533822EE8D6B005A1C93 /* Project object */;
+}

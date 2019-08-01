@@ -1,0 +1,33 @@
+{
+  "name": "YJUIKit",
+  "version": "0.1.0",
+  "summary": "A short description of YJUIKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://39.108.16.93:20081/yinq/YJUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "殷全": "47113328@qq.com"
+  },
+  "source": {
+    "git": "http://39.108.16.93:20081/yinq/YJUIKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YJUIKit/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "YYKit": [
+
+    ],
+    "MJExtension": [
+
+    ]
+  }
+}
