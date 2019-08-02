@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImageView* iconImageView;
 
+@property (nonatomic) BOOL faded;
 @end
 
 @implementation MainStartSearchControl
@@ -40,6 +41,25 @@
         _iconImageView = [self addImageView:@"search_icon"];
     }
     return _iconImageView;
+}
+
+- (void) setFaded:(BOOL)faded{
+    if (faded == _faded) {
+        return;
+    }
+    _faded = faded;
+    //UIImage* searchIcon = [UIImage imageNamed:@"search_icon"];
+    if (faded) {
+        self.backgroundColor = [UIColor whiteColor];
+        [self setCornerRadius:14 color:[UIColor colorWithHexString:@"797979"] boarderwidth:1];
+        
+        //self.iconImageView.image = [searchIcon imageWithColor:[UIColor whiteColor]];
+    }
+    else{
+        self.backgroundColor = [UIColor colorWithHexString:@"79797979"];
+        [self setCornerRadius:14 color:[UIColor whiteColor] boarderwidth:1];
+        //self.iconImageView.image = searchIcon;
+    }
 }
 
 @end
@@ -92,7 +112,7 @@
 - (UIButton*) historyButton{
     if (!_historyButton) {
         _historyButton = [self addButton:UIButtonTypeCustom];
-        [_historyButton setImage:[UIImage imageNamed:@"closeicon"] forState:UIControlStateNormal];
+        [_historyButton setImage:[UIImage imageNamed:@"clockicon"] forState:UIControlStateNormal];
     }
     return _historyButton;
 }
@@ -103,6 +123,28 @@
         [_filterButton setImage:[UIImage imageNamed:@"filter_icon"] forState:UIControlStateNormal];
     }
     return _filterButton;
+}
+
+- (void) setFaded:(BOOL)faded{
+    if (faded == _faded) {
+        return;
+    }
+    _faded = faded;
+    if (faded) {
+        self.backgroundColor = [UIColor commonBackgroundColor];
+        UIImage* clockIcon = [[UIImage imageNamed:@"clockicon"] imageWithColor:[UIColor colorWithHexString:@"A0A0A0"]];
+        UIImage* filterIcon = [[UIImage imageNamed:@"filter_icon"] imageWithColor:[UIColor colorWithHexString:@"A0A0A0"]];
+        
+        [self.historyButton setImage:clockIcon forState:UIControlStateNormal];
+        [self.filterButton setImage:filterIcon forState:UIControlStateNormal];
+    }
+    else{
+        self.backgroundColor = [UIColor clearColor];
+        [self.historyButton setImage:[UIImage imageNamed:@"clockicon"] forState:UIControlStateNormal];
+        [self.filterButton setImage:[UIImage imageNamed:@"filter_icon"] forState:UIControlStateNormal];
+    }
+    
+    [self.searchControl setFaded:faded];
 }
 
 @end

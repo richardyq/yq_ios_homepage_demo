@@ -335,4 +335,11 @@ typedef NS_ENUM(NSUInteger, MainStartTableSection) {
         }
     }
 }
+
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat offsety = scrollView.contentOffset.y;
+    
+    BOOL faded = (offsety > 104);
+    [self.nagigationHeaderView setFaded:faded];
+}
 @end

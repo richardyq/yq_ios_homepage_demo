@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIButton* historyButton;
 @property (nonatomic, strong) UIButton* filterButton;
 
+@property (nonatomic) BOOL faded;
+
 @end
 
 NS_ASSUME_NONNULL_END
